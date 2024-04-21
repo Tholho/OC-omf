@@ -1,0 +1,168 @@
+/**** Colors ****/
+
+$color-background: #F6F6F6;
+$color-primary: #9356DC;
+$color-secondary: #FCA311;
+$color-green-light: #99E2D0;
+$color-green-font: #008766;
+$color-white: #FFFFFF;
+$color-black: #101010;
+$color-grey: #353535;
+$color-grey-2: #EAEAEA;
+$color-gradient-bright: #FF79DA;
+$color-gradient-dark: $color-primary;
+
+/**** x ****/
+
+$font-main: "Roboto";
+$font-ohmyfood: "Shrikhand";
+
+/**** x ****/
+
+/**** x ****/
+
+
+body {
+	font: 100% $font-main;
+	border: 1px solid black;
+	margin: 0px;
+	padding: 0px;
+//	box-sizing: border-box;
+}
+
+.header {
+	&__title {
+		font: 100% $font-ohmyfood;
+		font-size: 4rem;
+		text-align: center;
+		margin: 0;
+		&Container {
+		box-shadow: 0px 2px 15px rgba(0,0,0,0.35);
+		margin-bottom: 7px;
+		padding: 0;
+		}
+	}
+
+	&__location {
+	display: flex;
+	justify-content: center;
+	background-color: #EAEAEA;
+	clip-path: margin-box;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
+	margin-bottom: 8px;
+	padding: 26px;
+		&Logo {
+		}
+		&Text {
+		}
+	}
+}
+
+main {
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: #F6F6F6;
+}
+
+section {
+}
+
+.section {
+	&__title {
+	}
+
+	&__hero {
+		&Title {
+		margin: 20px;
+		text-align: center;
+		}
+		&Description {
+		font-weight: 200;
+		margin: 20px;
+		text-align: center;
+		}
+		&Button {
+		text-align: center;
+		}
+		a {
+		}
+	}
+
+	&__steps {
+	background-color: #FFFFFF;
+		&Card {
+			&Unit {
+
+				margin: 25px 30px;
+				&Content {
+				    background-color: #F6F6F6;
+                    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+                    border-radius: 25px;
+					display: flex;
+					flex-flow: row;
+					justify-content: center;
+					&Number {
+					position: relative;
+					left: -15px;
+					top:-5px;
+					border: 2px solid $color-primary;
+					background-color: $color-primary;
+					color: white;
+					padding: 0.2rem 0.55rem;
+					border-radius: 50%;
+					justify-self: left;
+					}
+					i {
+					align-content:center;
+					}
+					&Text {
+						border: 2px solid black;
+						align-content: center;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	&__restaurants {
+		&Card {
+			display:flex;
+			flex-flow: column;
+			&Unit {
+                max-width: 500px;
+                max-height: 500px;
+				&Content {
+					&Image {
+
+					max-width: 500px;
+                max-height: 500px;
+						&Container {
+						}
+					}
+					&Text {
+						&Title {
+						}
+						&Location {
+						}
+					}
+					&Like {
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+}
+
+.footer {
+	&__title {
+	}
+	&__element {
+	}
+	&__cooperate {
+	}
+}
