@@ -1,6 +1,72 @@
 /**** Colors ****/
 /**** x ****/
 /**** x ****/
+@keyframes fade {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  20% {
+    display: none;
+  }
+  70% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes toTheTop {
+  0% {
+    position: absolute;
+    top: 100%;
+  }
+  100% {
+    position: absolute;
+    top: 0%;
+  }
+}
+@keyframes rotateCog {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.loader {
+  height: 120%;
+  top: 1px;
+  transform: translateY(-1px);
+  position: sticky;
+  z-index: 100;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  animation: fade 3s normal forwards;
+  animation-delay: 2s;
+}
+
+.cog {
+  text-align: center;
+  /*need media query here */
+  padding-top: 35%;
+}
+
+.fa-cog {
+  color: white;
+  font-size: 2vw;
+  opacity: 1;
+  animation: rotateCog 3s normal forwards;
+}
+
 /**** x ****/
 body {
   font: 100% "Roboto";
@@ -36,28 +102,52 @@ main {
   background-color: #F6F6F6;
 }
 
+.gradientButton {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+  scale: 1;
+  transition: all ease 0.8s;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 15px;
+  background: linear-gradient(5deg, #9356DC -13.81%, #FF79DA 107.89%, #FF79DA 137.92%);
+}
+
+.gradientButton:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
+}
+
 .section__title {
   margin: 20px;
 }
 .section__heroTitle {
+  font-weight: 500;
   margin: 20px;
   text-align: center;
 }
 .section__heroDescription {
-  font-weight: 200;
+  font-weight: 300;
   margin: 20px;
   text-align: center;
 }
 .section__heroButton {
   text-align: center;
+  margin: 50px;
+  transition: transform ease 0.6s;
+}
+.section__heroButton:hover {
+  transform: scale(1.2);
 }
 .section__steps {
   background-color: #FFFFFF;
 }
 .section__stepsCardUnit {
   margin: 25px 30px;
+  transition: all ease 0.4s;
 }
 .section__stepsCardUnitContent {
+  transition: box-shadow ease 1s;
   background-color: #F6F6F6;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
@@ -75,11 +165,23 @@ main {
 .section__stepsCardUnitContent i {
   align-content: center;
   margin-right: 15px;
+  color: #353535;
+  opacity: 0.7;
 }
 .section__stepsCardUnitContentText {
   margin: 15px;
   align-content: center;
   text-align: center;
+}
+.section__stepsCardUnitContent:hover {
+  box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+.section__stepsCardUnitContent:hover i {
+  color: #9356DC;
+  opacity: 1;
+}
+.section__stepsCardUnit:hover {
+  transform: scale(1.02);
 }
 .section__restaurantsCard {
   display: flex;
@@ -107,18 +209,51 @@ main {
 .section__restaurantsCardUnitContentImageContainer {
   aspect-ratio: 2/1.2;
 }
+.section__restaurantsCardUnitContentLike {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.section__restaurantsCardUnitContentLikeLight {
+  color: grey;
+  transform: translateY(10px) scaleY(1.1);
+  margin-right: 50px;
+}
+.section__restaurantsCardUnitContentLikeSolid {
+  transform: translateY(-9px) scaleY(1.1);
+}
+.section__restaurantsCardUnitContentLikeSolid a {
+  background: -moz-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.section__restaurantsCardUnitContentLikeSolid a:hover, .section__restaurantsCardUnitContentLikeSolid a:active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .footer {
   background-color: #353535;
   color: white;
+  padding-bottom: 25px;
 }
 .footer__title {
-  padding: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
   font: 100% "Shrikhand";
+}
+.footer__element {
+  padding-top: 2px;
 }
 .footer__element a {
   color: white;
-}
-.footer__element a {
   padding-left: 15px;
 }
 .footer__cooperate i {

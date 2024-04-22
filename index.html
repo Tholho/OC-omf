@@ -17,170 +17,182 @@
 	<link rel="stylesheet"  href="./assets/CSS/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__titleContainer">
-            <h1 class="header__title">
-            ohmyfood
-            </h1>
+    <div class="loader">
+        <div class="cog">
+        <i class="fa-solid fa-cog"></i>
         </div>
-        <div class="header__location">
-            <div class="header__locationLogo">
-                <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="notloader">
+        <header class="header">
+            <div class="header__titleContainer">
+                <h1 class="header__title">
+                    ohmyfood
+                </h1>
             </div>
-            <div class="header__locationText">
-                Paris, Belleville
+            <div class="header__location">
+                <div class="header__locationLogo">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="header__locationText">
+                    Paris, Belleville
+                </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <section class="section section__hero">
-            <h1 class="section__heroTitle">
-                Réservez le menu qui vous convient
-            </h1>
-            <p class="section__heroDescription">
-            Découvrez des restaurants d'exception, sélectionnés par nos soins.
-            </p>
-            <div class="section__heroButton">
-            <a class="gradientButton" href="#Restaurants">
-                Explorer nos restaurants
-            </a>
-            </div>
-        </section>
-        <section class="section section__steps">
-            <h2 class="section__title">
-                Fonctionnement
-            </h2>
-            <div class="section__stepsCard">
-                <div class="section__stepsCardUnit">
-                    <div class="section__stepsCardUnitContent">
-                        <h3 class="section__stepsCardUnitContentNumber">1
-                        </h3>
-                        <i class="fas fa-mobile-alt"></i>
-                        <p class="section__stepsCardUnitContentText">
+        </header>
+        <main>
+            <section class="section section__hero">
+                <h1 class="section__heroTitle">
+                    Réservez le menu qui vous convient
+                </h1>
+                <p class="section__heroDescription">
+                Découvrez des restaurants d'exception, sélectionnés par nos soins.
+                </p>
+                <div class="section__heroButton">
+                    <a class="gradientButton" href="#Restaurants">
+                        Explorer nos restaurants
+                    </a>
+                </div>
+            </section>
+            <section class="section section__steps">
+                <h2 class="section__title">
+                    Fonctionnement
+                </h2>
+                <div class="section__stepsCard">
+                    <div class="section__stepsCardUnit">
+                        <div class="section__stepsCardUnitContent">
+                            <h3 class="section__stepsCardUnitContentNumber">1
+                            </h3>
+                            <i class="fas fa-mobile-alt"></i>
+                            <p class="section__stepsCardUnitContentText">
                             Choisissez un restaurant
-                        </p>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="section__stepsCardUnit">
-                    <div class="section__stepsCardUnitContent">
-                        <h3 class="section__stepsCardUnitContentNumber">2
-                        </h3>
-                        <i class="fa-solid fa-list-ul"></i>
-                        <p class="section__stepsCardUnitContentText">
+                    <div class="section__stepsCardUnit">
+                        <div class="section__stepsCardUnitContent">
+                            <h3 class="section__stepsCardUnitContentNumber">2
+                            </h3>
+                            <i class="fa-solid fa-list-ul"></i>
+                            <p class="section__stepsCardUnitContentText">
                             Composez votre menu
-                        </p>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="section__stepsCardUnit">
-                    <div class="section__stepsCardUnitContent">
-                        <h3 class="section__stepsCardUnitContentNumber">3
-                        </h3>
-                        <i class="fa-solid fa-store"></i>
-                        <p class="section__stepsCardUnitContentText">
+                    <div class="section__stepsCardUnit">
+                        <div class="section__stepsCardUnitContent">
+                            <h3 class="section__stepsCardUnitContentNumber">3
+                            </h3>
+                            <i class="fa-solid fa-store"></i>
+                            <p class="section__stepsCardUnitContentText">
                             Dégustez au restaurant
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section section__restaurants" id="Restaurants">
-            <h2 class="section__title">
-                Restaurants
+            </section>
+            <section class="section section__restaurants" id="Restaurants">
+                <h2 class="section__title">
+                    Restaurants
+                </h2>
+                <nav class="section__restaurantsCard">
+                    <div id="rest1" class="section__restaurantsCardUnit">
+                        <div class="section__restaurantsCardUnitContentImageContainer">
+                            <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/D.jpg" alt="Assiette de saumon salade poisson blanc et balsamique">
+                        </div>
+                        <div class="section__restaurantsCardUnitContent">
+                            <div class="section__restaurantsCardUnitContentText">
+                                <h3 class="section__restaurantsCardUnitContentTextTitle">
+                                    La palette du goût
+                                </h3>
+                                <h4 class="section__restaurantsCardUnitContentTextLocation">
+                                    Ménilmontant
+                                </h4>
+                            </div>
+                            <div class="section__restaurantsCardUnitContentLike">
+                                <div class="section__restaurantsCardUnitContentLikeLight">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="section__restaurantsCardUnitContentLikeSolid">
+                                    <a href="#rest1"><i class="fas fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__restaurantsCardUnit">
+                        <div class="section__restaurantsCardUnitContentImageContainer">
+                            <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/C.jpg" alt="Entrée tomate mozzarella et plat de calamar et pomme dauphines et légumes">
+                        </div>
+                        <div class="section__restaurantsCardUnitContent">
+                            <div class="section__restaurantsCardUnitContentText">
+                                <h3 class="section__restaurantsCardUnitContentTextTitle">
+                                    La note enchantée
+                                </h3>
+                                <h4 class="section__restaurantsCardUnitContentTextLocation">
+                                    Charonne
+                                </h4>
+                            </div>
+                            <div class="section__restaurantsCardUnitContentLike">
+                                CoeurLogoWIP
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__restaurantsCardUnit">
+                        <div class="section__restaurantsCardUnitContentImageContainer">
+                            <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/A.jpg" alt="Assiette avec épinards viande panée et mozzarella">
+                        </div>
+                        <div class="section__restaurantsCardUnitContent">
+                            <div class="section__restaurantsCardUnitContentText">
+                                <h3 class="section__restaurantsCardUnitContentTextTitle">
+                                    À la française
+                                </h3>
+                                <h4 class="section__restaurantsCardUnitContentTextLocation">
+                                    Cité Rouge
+                                </h4>
+                            </div>
+                            <div class="section__restaurantsCardUnitContentLike">
+                                CoeurLogoWIP
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__restaurantsCardUnit">
+                        <div class="section__restaurantsCardUnitContentImageContainer">
+                            <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/B.jpg" alt="Plat de poisson en sauce avec légumes">
+                        </div>
+                        <div class="section__restaurantsCardUnitContent">
+                            <div class="section__restaurantsCardUnitContentText">
+                                <h3 class="section__restaurantsCardUnitContentTextTitle">
+                                    Le délice des sens
+                                </h3>
+                                <h4 class="section__restaurantsCardUnitContentTextLocation">
+                                    Folie-Méricourt
+                                </h4>
+                            </div>
+                            <div class="section__restaurantsCardUnitContentLike">
+                                CoeurLogoWIP
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+        </main>
+        <footer class="footer">
+            <h2 class="footer__title">
+                ohmyfood
             </h2>
-            <nav class="section__restaurantsCard">
-                <div class="section__restaurantsCardUnit">
-                    <div class="section__restaurantsCardUnitContentImageContainer">
-                        <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/D.jpg" alt="Assiette de saumon salade poisson blanc et balsamique">
-                    </div>
-                    <div class="section__restaurantsCardUnitContent">
-                        <div class="section__restaurantsCardUnitContentText">
-                            <h3 class="section__restaurantsCardUnitContentTextTitle">
-                                La palette du goût
-                            </h3>
-                            <h4 class="section__restaurantsCardUnitContentTextLocation">
-                                Ménilmontant
-                            </h4>
-                        </div>
-                        <div class="section__restaurantsCardUnitContentLike">
-                            CoeurLogoWIP
-                        </div>
-                    </div>
-                </div>
-                <div class="section__restaurantsCardUnit">
-                    <div class="section__restaurantsCardUnitContentImageContainer">
-                        <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/C.jpg" alt="Entrée tomate mozzarella et plat de calamar et pomme dauphines et légumes">
-                    </div>
-                    <div class="section__restaurantsCardUnitContent">
-                        <div class="section__restaurantsCardUnitContentText">
-                            <h3 class="section__restaurantsCardUnitContentTextTitle">
-                                La note enchantée
-                            </h3>
-                            <h4 class="section__restaurantsCardUnitContentTextLocation">
-                                Charonne
-                            </h4>
-                        </div>
-                        <div class="section__restaurantsCardUnitContentLike">
-                            CoeurLogoWIP
-                        </div>
-                    </div>
-                </div>
-                <div class="section__restaurantsCardUnit">
-                    <div class="section__restaurantsCardUnitContentImageContainer">
-                        <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/A.jpg" alt="Assiette avec épinards viande panée et mozzarella">
-                    </div>
-                    <div class="section__restaurantsCardUnitContent">
-                        <div class="section__restaurantsCardUnitContentText">
-                            <h3 class="section__restaurantsCardUnitContentTextTitle">
-                                À la française
-                            </h3>
-                            <h4 class="section__restaurantsCardUnitContentTextLocation">
-                                Cité Rouge
-                            </h4>
-                        </div>
-                        <div class="section__restaurantsCardUnitContentLike">
-                            CoeurLogoWIP
-                        </div>
-                    </div>
-                </div>
-                <div class="section__restaurantsCardUnit">
-                    <div class="section__restaurantsCardUnitContentImageContainer">
-                        <img class="section__restaurantsCardUnitContentImage" src="./assets/images/restaurants/B.jpg" alt="Plat de poisson en sauce avec légumes">
-                    </div>
-                    <div class="section__restaurantsCardUnitContent">
-                        <div class="section__restaurantsCardUnitContentText">
-                            <h3 class="section__restaurantsCardUnitContentTextTitle">
-                                Le délice des sens
-                            </h3>
-                            <h4 class="section__restaurantsCardUnitContentTextLocation">
-                                Folie-Méricourt
-                            </h4>
-                        </div>
-                        <div class="section__restaurantsCardUnitContentLike">
-                            CoeurLogoWIP
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </section>
-    </main>
-    <footer class="footer">
-        <h2 class="footer__title">
-            ohmyfood
-        </h2>
-        <div class="footer__element footer__cooperate">
-            <i class="fas fa-utensils"></i>
-            <a href="#">Proposer un restaurant</a>
+            <div class="footer__element footer__cooperate">
+                <i class="fas fa-utensils"></i>
+                <a href="#">Proposer un restaurant</a>
+            </div>
+            <div class="footer__element footer__cooperate">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <a href="#">Devenir partenaire</a>
+            </div>
+            <div class="footer__element">
+                <a href="#">Mention légales</a>
+            </div>
+            <div class="footer__element">
+                <a href="#">Contact</a>
+            </div>
+        </footer>
         </div>
-        <div class="footer__element footer__cooperate">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <a href="#">Devenir partenaire</a>
-        </div>
-        <div class="footer__element">
-            <a href="#">Mention légales</a>
-        </div>
-        <div class="footer__element">
-            <a href="#">Contact</a>
-        </div>
-    </footer>
 </body>
 </html>

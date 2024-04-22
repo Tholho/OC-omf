@@ -19,6 +19,74 @@ $font-ohmyfood: "Shrikhand";
 
 /**** x ****/
 
+@keyframes fade {
+  0% {
+      opacity: 1;
+      display: block;
+  }
+  20% {
+      display: none;
+  }
+  70%{
+      display: none;
+      opacity: 0;
+  }
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
+@keyframes toTheTop {
+    0% {
+        position: absolute;
+        top: 100%;
+    }
+    100% {
+        position: absolute;
+        top: 0%;
+    }
+}
+
+@keyframes rotateCog {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.loader{
+    height: 120%;
+    top: 1px;
+    transform: translateY(-1px);
+	position: sticky;
+	z-index: 100;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+   animation: fade 3s normal forwards;
+   animation-delay: 2s;
+}
+
+.cog {
+  text-align: center;
+  /*need media query here */
+  padding-top: 35%;
+}
+.fa-cog {
+    color: white;
+    font-size: 2vw;
+    opacity: 1;
+    animation: rotateCog 3s normal forwards;
+}
 /**** x ****/
 
 
@@ -65,6 +133,22 @@ main {
     background-color: #F6F6F6;
 }
 
+.gradientButton {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    scale: 1;
+    transition: all ease 0.8s;
+	color: white;
+	text-decoration: none;
+	border-radius: 25px;
+	padding: 15px;
+	background: linear-gradient(5deg, #9356DC -13.81%, #FF79DA 107.89%, #FF79DA 137.92%);
+}
+
+.gradientButton:hover {
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+    opacity: 0.9;
+}
+
 section {
 }
 
@@ -75,18 +159,22 @@ section {
 
 	&__hero {
 		&Title {
+		font-weight: 500;
 		margin: 20px;
 		text-align: center;
 		}
 		&Description {
-		font-weight: 200;
+		font-weight: 300;
 		margin: 20px;
 		text-align: center;
 		}
 		&Button {
 		text-align: center;
+		margin: 50px;
+		transition: transform ease 0.6s;
 		}
-		a {
+		&Button:hover {
+		transform: scale(1.2);
 		}
 	}
 
@@ -94,9 +182,10 @@ section {
 	background-color: #FFFFFF;
 		&Card {
 			&Unit {
-
 				margin: 25px 30px;
+				transition: all ease 0.4s;
 				&Content {
+				    transition: box-shadow ease 1s;
 				    background-color: #F6F6F6;
                     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
                     border-radius: 25px;
@@ -113,6 +202,8 @@ section {
 					i {
 					align-content:center;
 					margin-right: 15px;
+					color: $color-grey;
+					opacity: 0.7;
 					}
 					&Text {
 					margin: 15px;
@@ -120,6 +211,16 @@ section {
 					text-align: center;
 					}
 				}
+				&Content:hover {
+                    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+				}
+				&Content:hover i {
+				    color: $color-primary;
+					opacity: 1;
+				}
+			}
+			&Unit:hover {
+			     transform: scale(1.02);
 			}
 		}
 	}
@@ -155,6 +256,33 @@ section {
 						}
 					}
 					&Like {
+					display: flex;
+					flex-flow: column;
+					justify-content: center;
+					}
+					&LikeLight {
+				 color:grey;
+  transform: translateY(10px) scaleY(1.1);
+  margin-right: 50px;
+					}
+					&LikeSolid {
+					transform: translateY(-9px) scaleY(1.1);
+					}
+					&LikeSolid a {
+  background: -moz-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+    visibility: visible;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+                        &:hover, &:active {
+                            visibility: visible;
+                            opacity: 1;
+                        }
 					}
 				}
 			}
@@ -168,14 +296,17 @@ footer {
 .footer {
     background-color: $color-grey;
     color: white;
+    padding-bottom: 25px;
 	&__title {
-	padding: 15px;
+	padding-top: 15px;
+	padding-left: 15px;
 	font: 100% $font-ohmyfood;
+	}
+	&__element {
+	padding-top: 2px;
 	}
 	&__element a {
 	color: white;
-	}
-	&__element a {
 	padding-left: 15px;
 	}
 	&__cooperate i {
