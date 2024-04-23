@@ -42,6 +42,9 @@
   }
 }
 .loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120%;
   top: 1px;
   transform: translateY(-1px);
@@ -57,7 +60,6 @@
 .cog {
   text-align: center;
   /*need media query here */
-  padding-top: 35%;
 }
 
 .fa-cog {
@@ -65,6 +67,15 @@
   font-size: 2vw;
   opacity: 1;
   animation: rotateCog 3s normal forwards;
+}
+
+/**** x ****/
+#NoteEnchanteeImage {
+  object-position: 0px -220px;
+}
+
+.shiftImg80Up {
+  object-position: 0px -80px;
 }
 
 /**** x ****/
@@ -192,7 +203,6 @@ main {
   background-color: white;
   border-radius: 25px;
   object-fit: scale-down;
-  width: 80vw;
   margin: 20px;
 }
 .section__restaurantsCardUnitContent {
@@ -207,7 +217,32 @@ main {
   height: 100%;
 }
 .section__restaurantsCardUnitContentImageContainer {
-  aspect-ratio: 2/1.2;
+  position: relative;
+  aspect-ratio: 2/1;
+}
+.section__restaurantsCardUnitContentImageContainerText {
+  background-color: #99E2D0;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-right: 15px;
+  width: 4rem;
+  color: #008766;
+  padding: 5px 13px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.section__restaurantsCardUnitContentText {
+  margin: 10px;
+}
+.section__restaurantsCardUnitContentTextTitle {
+  margin: 5px;
+  font-size: 1.2rem;
+}
+.section__restaurantsCardUnitContentTextLocation {
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: 300;
 }
 .section__restaurantsCardUnitContentLike {
   display: flex;
@@ -250,7 +285,7 @@ main {
   font: 100% "Shrikhand";
 }
 .footer__element {
-  padding-top: 2px;
+  padding-top: 4px;
 }
 .footer__element a {
   color: white;
