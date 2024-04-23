@@ -1,6 +1,25 @@
 /**** Colors ****/
-/**** x ****/
-/**** x ****/
+/**** Fonts ****/
+/**** Media queries ****/
+@media (width >= 768px) {
+  .section__steps {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .section__stepsCard {
+    display: flex;
+    justify-content: center;
+  }
+  .section__restaurantsCard {
+    display: flex;
+    justify-content: center;
+  }
+  .section__restaurantsCardUnit {
+    max-width: 440px;
+  }
+}
+/**** Keyframes ****/
 @keyframes fade {
   0% {
     opacity: 1;
@@ -12,8 +31,10 @@
   70% {
     display: none;
     opacity: 0;
+    scale: 1;
   }
   100% {
+    scale: 0;
     opacity: 0;
     display: none;
   }
@@ -28,10 +49,26 @@
     top: 0%;
   }
 }
+@keyframes destroy {
+  0% {
+    scale: 1;
+    width: 100%;
+    height: 120%;
+  }
+  100% {
+    z-index: -100;
+    scale: 0;
+    width: 0%;
+    height: 0%;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+}
 @keyframes rotateCog {
   0% {
     transform: rotate(0);
     opacity: 1;
+    scale: 1;
   }
   80% {
     opacity: 0;
@@ -39,6 +76,7 @@
   100% {
     transform: rotate(360deg);
     opacity: 0;
+    scale: 0;
   }
 }
 .loader {
@@ -55,42 +93,59 @@
   height: 100vh;
   animation: fade 3s normal forwards;
   animation-delay: 2s;
+  animation: destroy 0s normal forwards;
+  animation-delay: 2s;
+}
+.loader i {
+  position: absolute;
 }
 
 .cog {
-  text-align: center;
+  animation: destroy 0s normal 3s forwards;
   /*need media query here */
 }
 
 .fa-cog {
+  text-align: center;
   color: white;
   font-size: 2vw;
   opacity: 1;
-  animation: rotateCog 3s normal forwards;
+  animation: rotateCog 3s normal 0s forwards;
 }
 
 /**** x ****/
-#NoteEnchanteeImage {
-  object-position: 0px -220px;
-}
-
-.shiftImg80Up {
-  object-position: 0px -80px;
-}
-
 /**** x ****/
+.menu_restaurant {
+  display: flex;
+  flex-flow: column;
+}
+
 body {
   font: 100% "Roboto";
-  border: 1px solid black;
   margin: 0px;
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
+.header i {
+  color: black;
+}
+.header__back {
+  position: absolute;
+  top: 22px;
+  left: 4vw;
+  color: black;
+  font-size: 2rem;
+}
 .header__title {
   font: 100% "Shrikhand";
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: center;
   margin: 0;
+  padding-top: 15px;
 }
 .header__titleContainer {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.35);
@@ -129,6 +184,112 @@ main {
   opacity: 0.9;
 }
 
+section {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+section .greenLine {
+  width: 30px;
+  height: 3px;
+  padding: 0;
+  margin: 0;
+  background-color: #99E2D0;
+}
+
+.section__header {
+  /* truc */
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6F6F6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 24px;
+  z-index: 2;
+  padding-left: 10px;
+}
+.section__headerTitle {
+  font: 100% "Shrikhand";
+}
+.section__headerLike {
+  /* truc */
+}
+.section__subsection {
+  display: flex;
+  flex-flow: column;
+  margin: 0px 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+  /* truc */
+}
+.section__subsectionTitle {
+  /* truc */
+  font-weight: 300;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.section__article {
+  /* truc */
+  background: #FFFFFF;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+.section__articleContent {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  transition: padding-right ease 1s;
+}
+.section__articleContent:hover {
+  padding-right: 40px;
+}
+.section__articleDescription {
+  display: flex;
+  flex-flow: column;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* truc */
+}
+.section__articleDescriptionTitle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 20px;
+  /* truc */
+}
+.section__articleDescriptionSubtitle {
+  /* truc */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 20px;
+}
+.section__articleRight {
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* dunno yet*/
+  transform: translateX(40px);
+  /* truc */
+}
+.section__articleRightPrice {
+  margin-right: 5px;
+}
+.section__articleRightSelect {
+  display: flex;
+  padding: 10px;
+  background-color: #99E2D0;
+  /* truc */
+}
+.section__articleRightSelect i {
+  color: white;
+  /* truc */
+}
 .section__title {
   margin: 20px;
 }
@@ -169,13 +330,14 @@ main {
   background-color: #9356DC;
   color: white;
   padding: 0.2rem 0.55rem;
+  max-height: 1.4rem;
   border-radius: 50%;
   transform: translateX(-15px);
-  margin-right: 20px;
+  margin-right: 5px;
 }
 .section__stepsCardUnitContent i {
   align-content: center;
-  margin-right: 15px;
+  margin-right: 5px;
   color: #353535;
   opacity: 0.7;
 }
@@ -233,6 +395,7 @@ main {
   right: 10px;
 }
 .section__restaurantsCardUnitContentText {
+  color: black;
   margin: 10px;
 }
 .section__restaurantsCardUnitContentTextTitle {
@@ -273,6 +436,16 @@ main {
   visibility: visible;
   opacity: 1;
 }
+.section__restaurantImage {
+  object-fit: cover;
+  width: 100%;
+}
+.section__restaurantImageContainer {
+  display: flex;
+  z-index: -1;
+  transform: translateY(-8px);
+  max-height: 400px;
+}
 
 .footer {
   background-color: #353535;
@@ -280,6 +453,7 @@ main {
   padding-bottom: 25px;
 }
 .footer__title {
+  margin-top: 0px;
   padding-top: 15px;
   padding-left: 15px;
   font: 100% "Shrikhand";

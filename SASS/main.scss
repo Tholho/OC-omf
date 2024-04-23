@@ -12,12 +12,37 @@ $color-grey-2: #EAEAEA;
 $color-gradient-bright: #FF79DA;
 $color-gradient-dark: $color-primary;
 
-/**** x ****/
+/**** Fonts ****/
 
 $font-main: "Roboto";
 $font-ohmyfood: "Shrikhand";
 
-/**** x ****/
+/**** Media queries ****/
+@media (width >= 768px){
+    .section{
+        &__steps {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            &Card {
+                display: flex;
+                justify-content: center;
+            }
+    }
+        &__restaurants {
+            &Card {
+                display: flex;
+                justify-content: center;
+                &Unit {
+                    max-width: 440px;
+                }
+            }
+
+        }
+    }
+}
+
+/**** Keyframes ****/
 
 @keyframes fade {
   0% {
@@ -30,8 +55,10 @@ $font-ohmyfood: "Shrikhand";
   70%{
       display: none;
       opacity: 0;
+      scale:1;
   }
   100% {
+      scale:0;
       opacity: 0;
       display: none;
   }
@@ -48,10 +75,27 @@ $font-ohmyfood: "Shrikhand";
     }
 }
 
+@keyframes destroy {
+    0% {
+        scale: 1;
+        width: 100%;
+        height: 120%;
+    }
+    100% {
+        z-index: -100;
+        scale: 0;
+        width: 0%;
+        height: 0%;
+        padding-top: 0px;
+			margin-top:0px;
+    }
+}
+
 @keyframes rotateCog {
     0% {
         transform: rotate(0);
         opacity: 1;
+        scale:1;
     }
 
     80% {
@@ -60,6 +104,7 @@ $font-ohmyfood: "Shrikhand";
     100% {
         transform: rotate(360deg);
         opacity: 0;
+        scale: 0;
     }
 }
 
@@ -77,43 +122,62 @@ $font-ohmyfood: "Shrikhand";
   height: 100vh;
    animation: fade 3s normal forwards;
    animation-delay: 2s;
+   animation: destroy 0s normal forwards;
+   animation-delay:2s;
+   i {
+       position: absolute;
+   }
 }
 
 .cog {
-  text-align: center;
+  animation: destroy 0s normal 3s forwards;
   /*need media query here */
 }
 .fa-cog {
+    text-align: center;
     color: white;
     font-size: 2vw;
     opacity: 1;
-    animation: rotateCog 3s normal forwards;
+    animation: rotateCog 3s normal 0s forwards;
 }
 /**** x ****/
-#NoteEnchanteeImage {
-object-position: 0px -220px;
-}
-
-.shiftImg80Up {
-    object-position: 0px -80px;
-}
-
 /**** x ****/
+
+.menu_restaurant {
+
+    display: flex;
+        flex-flow: column;
+
+}
 
 body {
 	font: 100% $font-main;
-	border: 1px solid black;
 	margin: 0px;
 	padding: 0px;
 //	box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
+    i{
+    color: black;
+    }
+    &__back {
+        position: absolute;
+        top: 22px;
+        left: 4vw;
+        color: black;
+        font-size: 2rem;
+    }
 	&__title {
 		font: 100% $font-ohmyfood;
-		font-size: 4rem;
+		font-size: 2.5rem;
 		text-align: center;
 		margin: 0;
+		padding-top: 15px;
 		&Container {
 		box-shadow: 0px 2px 15px rgba(0,0,0,0.35);
 		margin-bottom: 7px;
@@ -160,9 +224,120 @@ main {
 }
 
 section {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    .greenLine {
+        width: 30px;
+        height: 3px;
+        padding: 0;
+        margin: 0;
+        background-color: $color-green-light;
+    }
 }
 
 .section {
+
+    &__header {
+        /* truc */
+            display: flex;
+          justify-content: space-between;
+          background-color: #F6F6F6;
+          border-top-left-radius: 25px;
+          border-top-right-radius: 24px;
+          z-index:2;
+          padding-left: 10px;
+        &Title {
+            font: 100% $font-ohmyfood;
+        }
+            &Like {
+                /* truc */
+
+            }
+    }
+    &__subsection {
+        display: flex;
+        flex-flow: column;
+        margin: 0px 20px;
+        margin-top: 0px;
+        padding-top: 0px;
+        /* truc */
+        &Title {
+            /* truc */
+            font-weight: 300;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+    }
+
+    &__article {
+        /* truc */
+        background: #FFFFFF;
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        overflow: hidden;
+        &Content {
+            overflow:hidden;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 100%;
+            transition: padding-right ease 1s;
+            &:hover {
+                padding-right: 40px;
+            }
+        }
+        &Description {
+            display: flex;
+            flex-flow: column;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            /* truc */
+            &Title {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                margin: 0px;
+                padding: 0px;
+                padding-right: 20px;
+                /* truc */
+
+            }
+            &Subtitle{
+                /* truc */
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 0px;
+                    padding: 0px;
+                    padding-right: 20px;
+
+            }
+        }
+        &Right {
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* dunno yet*/
+            transform: translateX(40px);
+            /* truc */
+            &Price {
+                margin-right: 5px;
+            }
+            &Select {
+                display: flex;
+                padding: 10px;
+                background-color: $color-green-light;
+                /* truc */
+                    i{
+                        color: white;
+                    /* truc */
+
+                    }
+                }
+
+        }
+    }
+
 	&__title {
 	margin: 20px;
 	}
@@ -205,13 +380,14 @@ section {
 					background-color: $color-primary;
 					color: white;
 					padding: 0.2rem 0.55rem;
+					max-height: 1.4rem;
 					border-radius: 50%;
 					transform: translateX(-15px);
-					margin-right: 20px;
+					margin-right: 5px;
 					}
 					i {
 					align-content:center;
-					margin-right: 15px;
+					margin-right: 5px;
 					color: $color-grey;
 					opacity: 0.7;
 					}
@@ -272,6 +448,7 @@ section {
 						}
 					}
 					&Text {
+					color: black;
 					margin: 10px;
 						&Title {
 						margin: 5px;
@@ -316,6 +493,18 @@ section {
 			}
 		}
 	}
+	&__restaurant {
+	&Image {
+	object-fit: cover;
+	width: 100%;
+	&Container {
+	display: flex;
+	z-index: -1;
+	transform: translateY(-8px);
+	max-height: 400px ;
+	}
+	}
+	}
 }
 
 footer {
@@ -326,6 +515,7 @@ footer {
     color: white;
     padding-bottom: 25px;
 	&__title {
+	margin-top: 0px;
 	padding-top: 15px;
 	padding-left: 15px;
 	font: 100% $font-ohmyfood;
