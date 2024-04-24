@@ -63,6 +63,15 @@ $font-ohmyfood: "Shrikhand";
     }
 }
 
+@keyframes setMenu {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
 @keyframes toTheTop {
     0% {
         position: absolute;
@@ -283,6 +292,7 @@ section {
     }
 
     &__article {
+        transform: translateX(100vw);
         background: #ffffff;
         display: flex;
         justify-content: space-between;
@@ -291,6 +301,7 @@ section {
         border-radius: 10px;
         margin: 10px 0px;
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+        animation: 1s ease forwards setMenu;
         &Content {
             display: flex;
             justify-content: space-between;
@@ -594,5 +605,12 @@ footer {
         margin-left: 5px;
         position: absolute;
         left: 20px;
+    }
+}
+@for $i from 1 through 10 {
+    .section__subsection {
+        &:nth-child(#{$i}) article {
+            animation-delay: $i * 0.1s;
+        }
     }
 }
