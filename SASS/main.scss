@@ -295,10 +295,10 @@ section {
             display: flex;
             justify-content: space-between;
             box-sizing: border-box;
-            width: calc(100% + 60px);
+            width: 100%;
             align-items: center;
             margin-left: 15px;
-            transition: all ease 1s;
+            transition: all 1s ease;
             position: relative;
             &:hover {
                 padding-right: 0px;
