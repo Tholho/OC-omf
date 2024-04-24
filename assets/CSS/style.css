@@ -388,6 +388,12 @@ section .greenLine {
 .section__stepsCardUnit:hover {
   transform: scale(1.02);
 }
+.section__restaurants {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 960px;
+}
 .section__restaurantsCard {
   display: flex;
   flex-flow: wrap;
@@ -478,6 +484,17 @@ section .greenLine {
   transform: translateY(-8px);
   margin-bottom: -8px;
   max-height: 400px;
+}
+.section__order {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  margin: -13px 0px;
+}
+@media (width >= 768px) {
+  .section__order {
+    padding-bottom: 37px;
+  }
 }
 
 .footer {
