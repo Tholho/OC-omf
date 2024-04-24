@@ -116,10 +116,23 @@
 /**** x ****/
 /**** x ****/
 .menu_restaurant {
-  display: flex;
-  flex-flow: column;
+  transform: translateY(-40px);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
+@media (width >= 768px) {
+  .menu_restaurant {
+    margin: auto;
+    width: 80vw;
+    max-width: 1055px;
+    margin-bottom: -40px;
+    background-color: #F6F6F6;
+  }
+  .whiteBackground {
+    background-color: white;
+  }
+}
 body {
   font: 100% "Roboto";
   margin: 0px;
@@ -208,6 +221,9 @@ section .greenLine {
 }
 .section__headerTitle {
   font: 100% "Shrikhand";
+  font-size: 1.5rem;
+  margin-left: 5px;
+  margin-top: 30px;
 }
 .section__headerLike {
   /* truc */
@@ -230,65 +246,88 @@ section .greenLine {
   /* truc */
   background: #FFFFFF;
   display: flex;
-  flex-flow: nowrap;
   justify-content: space-between;
   width: 100%;
   overflow: hidden;
+  border-radius: 10px;
+  margin: 10px 0px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 .section__articleContent {
-  overflow: hidden;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 100%;
-  transition: padding-right ease 1s;
+  width: calc(100% + 60px);
+  align-items: center;
+  margin-left: 15px;
+  transition: all ease 1s;
+  position: relative;
 }
 .section__articleContent:hover {
-  padding-right: 40px;
+  padding-right: 0px;
+  width: calc(100% - 75px);
 }
 .section__articleDescription {
   display: flex;
   flex-flow: column;
   text-overflow: ellipsis;
   overflow: hidden;
+  margin-right: -40px;
+  padding-right: 20px;
+  max-width: 80vw;
   /* truc */
 }
 .section__articleDescriptionTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 0px;
   padding-right: 20px;
   /* truc */
 }
 .section__articleDescriptionSubtitle {
   /* truc */
+  font-size: 1rem;
+  font-weight: 300;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
   margin: 0px;
+  margin-bottom: 5px;
   padding: 0px;
-  padding-right: 20px;
+  padding-right: 60px;
 }
 .section__articleRight {
   display: flex;
-  align-items: center;
-  overflow: hidden; /* dunno yet*/
-  transform: translateX(40px);
-  /* truc */
+  overflow: visible;
+  flex-shrink: 0;
+  position: absolute;
+  right: -90px;
 }
 .section__articleRightPrice {
-  margin-right: 5px;
+  font-weight: 500;
+  align-self: end;
+  margin: 0px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 .section__articleRightSelect {
+  align-self: center;
   display: flex;
-  padding: 10px;
+  position: relative;
+  padding: 20px;
+  margin-right: 30px;
+  overflow: visible;
   background-color: #99E2D0;
-  /* truc */
 }
 .section__articleRightSelect i {
+  font-size: 1.2rem;
   color: white;
-  /* truc */
 }
 .section__title {
   margin: 20px;
@@ -444,6 +483,7 @@ section .greenLine {
   display: flex;
   z-index: -1;
   transform: translateY(-8px);
+  margin-bottom: -8px;
   max-height: 400px;
 }
 
