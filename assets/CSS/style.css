@@ -127,7 +127,7 @@
     width: 80vw;
     max-width: 1055px;
     margin-bottom: -40px;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
   }
   .whiteBackground {
     background-color: white;
@@ -168,7 +168,7 @@ a {
 .header__location {
   display: flex;
   justify-content: center;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   clip-path: margin-box;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 8px;
@@ -178,7 +178,7 @@ main {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 
 .gradientButton {
@@ -189,7 +189,7 @@ main {
   text-decoration: none;
   border-radius: 25px;
   padding: 15px;
-  background: linear-gradient(5deg, #9356DC -13.81%, #FF79DA 107.89%, #FF79DA 137.92%);
+  background: linear-gradient(5deg, #9356dc -13.81%, #ff79da 107.89%, #ff79da 137.92%);
 }
 
 .gradientButton:hover {
@@ -206,14 +206,13 @@ section .greenLine {
   height: 3px;
   padding: 0;
   margin: 0;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 .section__header {
-  /* truc */
   display: flex;
   justify-content: space-between;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-top-left-radius: 25px;
   border-top-right-radius: 24px;
   z-index: 2;
@@ -234,17 +233,14 @@ section .greenLine {
   margin: 0px 20px;
   margin-top: 0px;
   padding-top: 0px;
-  /* truc */
 }
 .section__subsectionTitle {
-  /* truc */
   font-weight: 300;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 .section__article {
-  /* truc */
-  background: #FFFFFF;
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -275,7 +271,6 @@ section .greenLine {
   margin-right: -40px;
   padding-right: 20px;
   max-width: 80vw;
-  /* truc */
 }
 .section__articleDescriptionTitle {
   font-size: 1.2rem;
@@ -288,10 +283,8 @@ section .greenLine {
   margin-bottom: 5px;
   padding: 0px;
   padding-right: 20px;
-  /* truc */
 }
 .section__articleDescriptionSubtitle {
-  /* truc */
   font-size: 1rem;
   font-weight: 300;
   text-overflow: ellipsis;
@@ -323,7 +316,7 @@ section .greenLine {
   padding: 20px;
   margin-right: 30px;
   overflow: visible;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 .section__articleRightSelect i {
   font-size: 1.2rem;
@@ -351,7 +344,7 @@ section .greenLine {
   transform: scale(1.2);
 }
 .section__steps {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .section__stepsCardUnit {
   margin: 25px 30px;
@@ -359,14 +352,14 @@ section .greenLine {
 }
 .section__stepsCardUnitContent {
   transition: box-shadow ease 1s;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   display: flex;
 }
 .section__stepsCardUnitContentNumber {
-  border: 2px solid #9356DC;
-  background-color: #9356DC;
+  border: 2px solid #9356dc;
+  background-color: #9356dc;
   color: white;
   padding: 0.2rem 0.55rem;
   max-height: 1.4rem;
@@ -389,7 +382,7 @@ section .greenLine {
   box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 .section__stepsCardUnitContent:hover i {
-  color: #9356DC;
+  color: #9356dc;
   opacity: 1;
 }
 .section__stepsCardUnit:hover {
@@ -422,7 +415,7 @@ section .greenLine {
   aspect-ratio: 2/1;
 }
 .section__restaurantsCardUnitContentImageContainerText {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border-radius: 4px;
   margin-top: 15px;
   margin-right: 15px;
@@ -460,9 +453,9 @@ section .greenLine {
   transform: translateY(-9px) scaleY(1.1);
 }
 .section__restaurantsCardUnitContentLikeSolid a {
-  background: -moz-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: -moz-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
