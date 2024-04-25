@@ -34,7 +34,7 @@ $font-ohmyfood: "Shrikhand";
                 display: flex;
                 justify-content: center;
                 &Unit {
-                    max-width: 440px;
+                    /**/
                 }
             }
         }
@@ -198,6 +198,7 @@ a {
         text-align: center;
         margin: 0;
         padding-top: 15px;
+        padding-bottom: 5px;
         &Container {
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.35);
             margin-bottom: 7px;
@@ -212,8 +213,9 @@ a {
         clip-path: margin-box;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
         margin-bottom: 8px;
-        padding: 26px;
+        padding: 17px;
         &Logo {
+            padding-right: 10px;
         }
         &Text {
             font-weight: 500;
@@ -637,14 +639,62 @@ footer {
     }
 }
 @media (width >= 768px) {
+    .header {
+        &__back {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        &__title {
+            font-size: 2.5rem;
+            padding-bottom: 10px;
+            &Container {
+                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+            }
+        }
+        &__location {
+            padding: 12px;
+            margin: 0;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        }
+    }
+
+    .section {
+        &__hero {
+            &Title {
+                font-size: 2.5rem;
+            }
+        }
+        &__header {
+            padding-top: 15px;
+            justify-content: center;
+            &Title {
+                margin-right: 30px;
+            }
+        }
+        &__restaurantsCardUnitContentLike {
+            transform: translateY(10px);
+            scale: 1.4;
+        }
+        &__subsection {
+            max-width: 650px;
+            margin: auto;
+            padding: 0px 20px;
+        }
+    }
+
+    .menu_restaurant {
+        justify-content: center;
+    }
+
     .footer {
         display: flex;
         flex-flow: row-reverse;
-        padding: 50px;
+        padding-top: 34px;
+        padding-bottom: 15px;
         &__title {
             margin: 0 30px;
-            padding: 0;
-            align-self: center;
+            padding: 15px 0px;
+            align-self: end;
         }
         &__cooperate,
         &__legalContact {
@@ -670,6 +720,13 @@ footer {
         }
     }
 }
+
+@media (width >= 1040px) {
+    .section__restaurantsCardUnit {
+        max-width: 440px;
+    }
+}
+
 @for $i from 2 through 4 {
     .section__subsection {
         &:nth-child(#{$i}) {

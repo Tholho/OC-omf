@@ -16,7 +16,7 @@
     justify-content: center;
   }
   .section__restaurantsCardUnit {
-    max-width: 440px;
+    /**/
   }
 }
 /**** Keyframes ****/
@@ -172,6 +172,7 @@ a {
   text-align: center;
   margin: 0;
   padding-top: 15px;
+  padding-bottom: 5px;
 }
 .header__titleContainer {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.35);
@@ -185,7 +186,10 @@ a {
   clip-path: margin-box;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 8px;
-  padding: 26px;
+  padding: 17px;
+}
+.header__locationLogo {
+  padding-right: 10px;
 }
 .header__locationText {
   font-weight: 500;
@@ -573,15 +577,54 @@ section .greenLine {
 }
 
 @media (width >= 768px) {
+  .header__back {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .header__title {
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+  }
+  .header__titleContainer {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .header__location {
+    padding: 12px;
+    margin: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .section__heroTitle {
+    font-size: 2.5rem;
+  }
+  .section__header {
+    padding-top: 15px;
+    justify-content: center;
+  }
+  .section__headerTitle {
+    margin-right: 30px;
+  }
+  .section__restaurantsCardUnitContentLike {
+    transform: translateY(10px);
+    scale: 1.4;
+  }
+  .section__subsection {
+    max-width: 650px;
+    margin: auto;
+    padding: 0px 20px;
+  }
+  .menu_restaurant {
+    justify-content: center;
+  }
   .footer {
     display: flex;
     flex-flow: row-reverse;
-    padding: 50px;
+    padding-top: 34px;
+    padding-bottom: 15px;
   }
   .footer__title {
     margin: 0 30px;
-    padding: 0;
-    align-self: center;
+    padding: 15px 0px;
+    align-self: end;
   }
   .footer__cooperate, .footer__legalContact {
     display: flex;
@@ -600,6 +643,11 @@ section .greenLine {
   .footer__cooperate p {
     position: relative;
     left: 0px;
+  }
+}
+@media (width >= 1040px) {
+  .section__restaurantsCardUnit {
+    max-width: 440px;
   }
 }
 .section__subsection:nth-child(2) article:nth-of-type(1) {
