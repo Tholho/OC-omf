@@ -645,10 +645,14 @@ footer {
         }
     }
 }
-@for $i from 1 through 10 {
+@for $i from 2 through 4 {
     .section__subsection {
-        &:nth-child(#{$i}) article {
-            animation-delay: $i * 0.1s;
+        &:nth-child(#{$i}) {
+            @for $j from 1 through 4 {
+                article:nth-of-type(#{$j}) {
+                    animation-delay: $i * $j * 0.1s;
+                }
+            }
         }
     }
 }
