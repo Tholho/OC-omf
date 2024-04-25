@@ -587,24 +587,62 @@ footer {
     padding-bottom: 25px;
     &__title {
         margin-top: 0px;
-        padding-top: 15px;
-        padding-left: 15px;
+        padding-top: 20px;
+        padding-left: 20px;
         font: 100% $font-ohmyfood;
     }
     &__element {
+        margin-left: 20px;
+        margin-top: 10px;
         padding-top: 4px;
     }
     &__element a {
+        display: flex;
+        align-items: center;
         color: white;
-        padding-left: 15px;
     }
-    &__cooperate i {
-        margin-left: 15px;
-    }
-    &__cooperate a {
-        margin-left: 5px;
+    &__cooperate p {
         position: absolute;
-        left: 20px;
+        left: 45px;
+    }
+    &__legalContact p {
+        font-weight: 300;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+@media (width >= 768px) {
+    .footer {
+        display: flex;
+        flex-flow: row-reverse;
+        padding: 50px;
+        &__title {
+            margin: 0 30px;
+            padding: 0;
+            align-self: center;
+        }
+        &__cooperate,
+        &__legalContact {
+            display: flex;
+            align-items: center;
+        }
+        &__cooperate {
+            margin-right: 30px;
+        }
+        &__list {
+            display: flex;
+            margin-right: 50px;
+        }
+
+        &__cooperate {
+            i {
+                padding-right: 15px;
+            }
+            p {
+                position: relative;
+                left: 0px;
+            }
+        }
     }
 }
 @for $i from 1 through 10 {

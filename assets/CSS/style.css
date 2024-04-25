@@ -514,26 +514,60 @@ section .greenLine {
 }
 .footer__title {
   margin-top: 0px;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding-top: 20px;
+  padding-left: 20px;
   font: 100% "Shrikhand";
 }
 .footer__element {
+  margin-left: 20px;
+  margin-top: 10px;
   padding-top: 4px;
 }
 .footer__element a {
+  display: flex;
+  align-items: center;
   color: white;
-  padding-left: 15px;
 }
-.footer__cooperate i {
-  margin-left: 15px;
-}
-.footer__cooperate a {
-  margin-left: 5px;
+.footer__cooperate p {
   position: absolute;
-  left: 20px;
+  left: 45px;
+}
+.footer__legalContact p {
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
 }
 
+@media (width >= 768px) {
+  .footer {
+    display: flex;
+    flex-flow: row-reverse;
+    padding: 50px;
+  }
+  .footer__title {
+    margin: 0 30px;
+    padding: 0;
+    align-self: center;
+  }
+  .footer__cooperate, .footer__legalContact {
+    display: flex;
+    align-items: center;
+  }
+  .footer__cooperate {
+    margin-right: 30px;
+  }
+  .footer__list {
+    display: flex;
+    margin-right: 50px;
+  }
+  .footer__cooperate i {
+    padding-right: 15px;
+  }
+  .footer__cooperate p {
+    position: relative;
+    left: 0px;
+  }
+}
 .section__subsection:nth-child(1) article {
   animation-delay: 0.1s;
 }
