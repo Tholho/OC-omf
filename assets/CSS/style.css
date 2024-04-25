@@ -151,6 +151,10 @@ a {
   text-decoration: none;
 }
 
+/* Global header */
+.header {
+  /* Location is specific to homepage */
+}
 .header i {
   color: black;
 }
@@ -163,7 +167,8 @@ a {
 }
 .header__title {
   font: 100% "Shrikhand";
-  font-size: 2.5rem;
+  font-size: 1.875rem;
+  font-weight: 700;
   text-align: center;
   margin: 0;
   padding-top: 15px;
@@ -182,6 +187,10 @@ a {
   margin-bottom: 8px;
   padding: 26px;
 }
+.header__locationText {
+  font-weight: 500;
+}
+
 main {
   display: flex;
   flex-flow: column;
@@ -217,6 +226,10 @@ section .greenLine {
   background-color: #99e2d0;
 }
 
+.section {
+  /* Restaurant menu headers */
+  /* Homepage styling */
+}
 .section__header {
   display: flex;
   justify-content: space-between;
@@ -229,6 +242,7 @@ section .greenLine {
 .section__headerTitle {
   font: 100% "Shrikhand";
   font-size: 1.5rem;
+  font-weight: 700;
   margin-left: 5px;
   margin-top: 30px;
 }
@@ -333,14 +347,21 @@ section .greenLine {
   color: white;
 }
 .section__title {
-  margin: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  align-self: start;
+  margin-left: 40px;
 }
 .section__heroTitle {
+  font-size: 1.5rem;
   font-weight: 500;
   margin: 20px;
   text-align: center;
 }
 .section__heroDescription {
+  font-size: 1.125rem;
   font-weight: 300;
   margin: 20px;
   text-align: center;
@@ -354,25 +375,35 @@ section .greenLine {
   transform: scale(1.2);
 }
 .section__steps {
-  background-color: #ffffff;
+  max-width: 1040px;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+}
+.section__stepsCard {
+  align-self: start;
+  margin-left: 30px;
 }
 .section__stepsCardUnit {
-  margin: 25px 30px;
+  margin: 25px 25px;
   transition: all ease 0.4s;
 }
 .section__stepsCardUnitContent {
   transition: box-shadow ease 1s;
   background-color: #f6f6f6;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
+  border-radius: 20px;
   display: flex;
 }
 .section__stepsCardUnitContentNumber {
+  font-size: 0.886rem;
+  font-weight: 500;
   border: 2px solid #9356dc;
   background-color: #9356dc;
   color: white;
-  padding: 0.2rem 0.55rem;
-  max-height: 1.4rem;
+  align-self: center;
+  padding: 0.2rem 0.45rem;
+  max-height: 1rem;
   border-radius: 50%;
   transform: translateX(-15px);
   margin-right: 5px;
@@ -384,7 +415,8 @@ section .greenLine {
   opacity: 0.7;
 }
 .section__stepsCardUnitContentText {
-  margin: 15px;
+  font-weight: 500;
+  margin: 25px;
   align-content: center;
   text-align: center;
 }
@@ -402,7 +434,7 @@ section .greenLine {
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 960px;
+  max-width: 1040px;
 }
 .section__restaurantsCard {
   display: flex;
@@ -413,7 +445,7 @@ section .greenLine {
   background-color: white;
   border-radius: 25px;
   object-fit: scale-down;
-  margin: 20px;
+  margin: 20px 40px;
 }
 .section__restaurantsCardUnitContent {
   display: flex;
@@ -428,7 +460,7 @@ section .greenLine {
 }
 .section__restaurantsCardUnitContentImageContainer {
   position: relative;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2.3/1;
 }
 .section__restaurantsCardUnitContentImageContainerText {
   background-color: #99e2d0;
@@ -448,11 +480,12 @@ section .greenLine {
 }
 .section__restaurantsCardUnitContentTextTitle {
   margin: 5px;
-  font-size: 1.2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 .section__restaurantsCardUnitContentTextLocation {
   margin: 5px;
-  font-size: 1rem;
+  font-size: 1.063rem;
   font-weight: 300;
 }
 .section__restaurantsCardUnitContentLike {
@@ -461,12 +494,13 @@ section .greenLine {
   justify-content: center;
 }
 .section__restaurantsCardUnitContentLikeLight {
-  color: grey;
-  transform: translateY(10px) scaleY(1.1);
-  margin-right: 50px;
+  font-weight: 300;
+  color: black;
+  transform: translateY(5px) scaleY(1.1);
+  margin-right: 25px;
 }
 .section__restaurantsCardUnitContentLikeSolid {
-  transform: translateY(-9px) scaleY(1.1);
+  transform: translateY(-14px) scaleY(1.1);
 }
 .section__restaurantsCardUnitContentLikeSolid a {
   background: -moz-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
