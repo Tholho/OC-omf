@@ -1,24 +1,6 @@
 /**** Colors ****/
 /**** Fonts ****/
 /**** Media queries ****/
-@media (width >= 768px) {
-  .section__steps {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-  .section__stepsCard {
-    display: flex;
-    justify-content: center;
-  }
-  .section__restaurantsCard {
-    display: flex;
-    justify-content: center;
-  }
-  .section__restaurantsCardUnit {
-    /**/
-  }
-}
 /**** Keyframes ****/
 @keyframes fade {
   0% {
@@ -129,18 +111,6 @@
   border-top-right-radius: 40px;
 }
 
-@media (width >= 768px) {
-  .menu_restaurant {
-    margin: auto;
-    width: 80vw;
-    max-width: 1055px;
-    margin-bottom: -40px;
-    background-color: #f6f6f6;
-  }
-  .whiteBackground {
-    background-color: white;
-  }
-}
 body {
   font: 100% "Roboto";
   margin: 0px;
@@ -153,6 +123,7 @@ a {
 
 /* Global header */
 .header {
+  position: relative;
   /* Location is specific to homepage */
 }
 .header i {
@@ -160,7 +131,7 @@ a {
 }
 .header__back {
   position: absolute;
-  top: 22px;
+  top: 25%;
   left: 4vw;
   color: black;
   font-size: 2rem;
@@ -227,6 +198,7 @@ section .greenLine {
   height: 3px;
   padding: 0;
   margin: 0;
+  margin-top: 4px;
   background-color: #99e2d0;
 }
 
@@ -245,8 +217,7 @@ section .greenLine {
 }
 .section__headerTitle {
   font: 100% "Shrikhand";
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2rem;
   margin-left: 5px;
   margin-top: 30px;
 }
@@ -275,7 +246,7 @@ section .greenLine {
   border-radius: 10px;
   margin: 10px 0px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
-  animation: 1s ease forwards setMenu;
+  animation: 0.6s ease forwards setMenu;
 }
 .section__articleContent {
   display: flex;
@@ -284,7 +255,8 @@ section .greenLine {
   width: 100%;
   align-items: center;
   margin-left: 15px;
-  transition: all 1s ease;
+  padding: 8px 0px;
+  transition: all 0.7s ease;
   position: relative;
 }
 .section__articleContent:hover {
@@ -328,7 +300,7 @@ section .greenLine {
   overflow: visible;
   flex-shrink: 0;
   position: absolute;
-  right: -90px;
+  right: -105px;
 }
 .section__articleRightPrice {
   font-weight: 500;
@@ -341,7 +313,7 @@ section .greenLine {
   align-self: center;
   display: flex;
   position: relative;
-  padding: 20px;
+  padding: 27px 36px 27px 20px;
   margin-right: 30px;
   overflow: visible;
   background-color: #99e2d0;
@@ -385,7 +357,6 @@ section .greenLine {
   margin: auto;
 }
 .section__stepsCard {
-  align-self: start;
   margin-left: 30px;
 }
 .section__stepsCardUnit {
@@ -496,6 +467,7 @@ section .greenLine {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  transform: translateY(8px) scale(1.4);
 }
 .section__restaurantsCardUnitContentLikeLight {
   font-weight: 300;
@@ -538,11 +510,6 @@ section .greenLine {
   padding-top: 40px;
   padding-bottom: 10px;
   margin: -13px 0px;
-}
-@media (width >= 768px) {
-  .section__order {
-    padding-bottom: 37px;
-  }
 }
 
 .footer {
@@ -593,6 +560,16 @@ section .greenLine {
     margin: 0;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   }
+  .menu_restaurant {
+    margin: auto;
+    width: 80vw;
+    max-width: 1055px;
+    margin-bottom: -40px;
+    background-color: #f6f6f6;
+  }
+  .whiteBackground {
+    background-color: white;
+  }
   .section__heroTitle {
     font-size: 2.5rem;
   }
@@ -603,9 +580,18 @@ section .greenLine {
   .section__headerTitle {
     margin-right: 30px;
   }
-  .section__restaurantsCardUnitContentLike {
-    transform: translateY(10px);
-    scale: 1.4;
+  .section__steps {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .section__stepsCard {
+    display: flex;
+    justify-content: center;
+    align-self: start;
+  }
+  .section__order {
+    padding-bottom: 37px;
   }
   .section__subsection {
     max-width: 650px;
@@ -651,42 +637,42 @@ section .greenLine {
   }
 }
 .section__subsection:nth-child(2) article:nth-of-type(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 .section__subsection:nth-child(2) article:nth-of-type(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .section__subsection:nth-child(2) article:nth-of-type(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 .section__subsection:nth-child(2) article:nth-of-type(4) {
-  animation-delay: 0.8s;
+  animation-delay: 0.4s;
 }
 
 .section__subsection:nth-child(3) article:nth-of-type(1) {
-  animation-delay: 0.3s;
+  animation-delay: 0.15s;
 }
 .section__subsection:nth-child(3) article:nth-of-type(2) {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 .section__subsection:nth-child(3) article:nth-of-type(3) {
-  animation-delay: 0.9s;
+  animation-delay: 0.45s;
 }
 .section__subsection:nth-child(3) article:nth-of-type(4) {
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 
 .section__subsection:nth-child(4) article:nth-of-type(1) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .section__subsection:nth-child(4) article:nth-of-type(2) {
-  animation-delay: 0.8s;
+  animation-delay: 0.4s;
 }
 .section__subsection:nth-child(4) article:nth-of-type(3) {
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 .section__subsection:nth-child(4) article:nth-of-type(4) {
-  animation-delay: 1.6s;
+  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */
