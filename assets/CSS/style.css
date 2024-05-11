@@ -1,6 +1,5 @@
 /**** Colors ****/
 /**** Fonts ****/
-/**** Media queries ****/
 /**** Keyframes ****/
 @keyframes fade {
   0% {
@@ -476,7 +475,7 @@ section .greenLine {
   margin-right: 25px;
 }
 .section__restaurantsCardUnitContentLikeSolid {
-  transform: translateY(-14px) scaleY(1.1);
+  transform: translateX(0.2px) translateY(-14px) scaleY(1.15) scaleX(1.02);
 }
 .section__restaurantsCardUnitContentLikeSolid a {
   background: -moz-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
@@ -543,6 +542,7 @@ section .greenLine {
   padding: 0px;
 }
 
+/**** Media queries ****/
 @media (width >= 768px) {
   .header__back {
     font-size: 1.5rem;
@@ -636,6 +636,7 @@ section .greenLine {
     max-width: 440px;
   }
 }
+/*** Computed animations ***/
 .section__subsection:nth-child(2) article:nth-of-type(1) {
   animation-delay: 0.1s;
 }
