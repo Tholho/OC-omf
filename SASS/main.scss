@@ -24,14 +24,17 @@ $font-ohmyfood: "Shrikhand";
         opacity: 1;
         display: block;
     }
+
     20% {
         display: none;
     }
+
     70% {
         display: none;
         opacity: 0;
         transform: scale(1);
     }
+
     100% {
         transform: scale(0);
         opacity: 0;
@@ -43,6 +46,7 @@ $font-ohmyfood: "Shrikhand";
     0% {
         transform: translateX(100vw);
     }
+
     100% {
         transform: translateX(0vw);
     }
@@ -53,6 +57,7 @@ $font-ohmyfood: "Shrikhand";
         position: absolute;
         top: 100%;
     }
+
     100% {
         position: absolute;
         top: 0%;
@@ -65,6 +70,7 @@ $font-ohmyfood: "Shrikhand";
         width: 100%;
         height: 120%;
     }
+
     100% {
         z-index: -100;
         transform: scale(0);
@@ -77,18 +83,17 @@ $font-ohmyfood: "Shrikhand";
 
 @keyframes rotateCog {
     0% {
-        transform: rotate(0);
+        transform: rotate(0deg) scale(1);
         opacity: 1;
-        transform: scale(1);
     }
 
     80% {
         opacity: 0;
     }
+
     100% {
-        transform: rotate(360deg);
+        transform: rotate(360deg) scale(0);
         opacity: 0;
-        transform: scale(0);
     }
 }
 
@@ -108,6 +113,7 @@ $font-ohmyfood: "Shrikhand";
     animation-delay: 2s;
     animation: destroy 0s normal forwards;
     animation-delay: 2s;
+
     i {
         position: absolute;
     }
@@ -117,6 +123,7 @@ $font-ohmyfood: "Shrikhand";
     animation: destroy 0s normal 3s forwards;
     /*need media query here */
 }
+
 .fa-cog {
     text-align: center;
     color: white;
@@ -124,6 +131,7 @@ $font-ohmyfood: "Shrikhand";
     opacity: 1;
     animation: rotateCog 3s normal 0s forwards;
 }
+
 /**** x ****/
 /**** x ****/
 
@@ -146,9 +154,11 @@ a {
 /* Global header */
 .header {
     position: relative;
+
     i {
         color: black;
     }
+
     &__back {
         position: absolute;
         top: 25%;
@@ -156,6 +166,7 @@ a {
         color: black;
         font-size: 2rem;
     }
+
     &__title {
         font: 100% $font-ohmyfood;
         font-size: 1.875rem;
@@ -164,12 +175,14 @@ a {
         margin: 0;
         padding-top: 15px;
         padding-bottom: 5px;
+
         &Container {
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.35);
             margin-bottom: 7px;
             padding: 0;
         }
     }
+
     /* Location is specific to homepage */
     &__location {
         display: flex;
@@ -179,9 +192,11 @@ a {
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
         margin-bottom: 8px;
         padding: 17px;
+
         &Logo {
             padding-right: 10px;
         }
+
         &Text {
             font-weight: 500;
         }
@@ -215,10 +230,12 @@ main {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     opacity: 0.9;
 }
+
 // useless relic code ?
 section {
     margin-bottom: 0px;
     padding-bottom: 0px;
+
     .greenLine {
         width: 30px;
         height: 3px;
@@ -239,22 +256,26 @@ section {
         border-top-right-radius: 24px;
         z-index: 2;
         padding-left: 10px;
+
         &Title {
             font: 100% $font-ohmyfood;
             font-size: 2rem;
             margin-left: 5px;
             margin-top: 30px;
         }
+
         &Like {
             /* truc */
         }
     }
+
     &__subsection {
         display: flex;
         flex-flow: column;
         margin: 0px 20px;
         margin-top: 0px;
         padding-top: 0px;
+
         &Title {
             font-weight: 300;
             margin-bottom: 0px;
@@ -273,6 +294,7 @@ section {
         margin: 10px 0px;
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
         animation: 0.6s ease forwards setMenu;
+
         &Content {
             display: flex;
             justify-content: space-between;
@@ -283,11 +305,13 @@ section {
             padding: 8px 0px;
             transition: all 0.7s ease;
             position: relative;
+
             &:hover {
                 padding-right: 0px;
                 width: calc(100% - 75px);
             }
         }
+
         &Description {
             display: flex;
             flex-flow: column;
@@ -296,6 +320,7 @@ section {
             margin-right: -40px;
             padding-right: 20px;
             max-width: 80vw;
+
             &Title {
                 font-size: 1.2rem;
                 font-weight: 500;
@@ -308,6 +333,7 @@ section {
                 padding: 0px;
                 padding-right: 20px;
             }
+
             &Subtitle {
                 font-size: 1rem;
                 font-weight: 300;
@@ -320,12 +346,14 @@ section {
                 padding-right: 60px;
             }
         }
+
         &Right {
             display: flex;
             overflow: visible;
             flex-shrink: 0;
             position: absolute;
             right: -105px;
+
             &Price {
                 font-weight: 500;
                 align-self: end;
@@ -333,6 +361,7 @@ section {
                 padding-right: 10px;
                 padding-bottom: 10px;
             }
+
             &Select {
                 align-self: center;
                 display: flex;
@@ -341,6 +370,7 @@ section {
                 margin-right: 30px;
                 overflow: visible;
                 background-color: $color-green-light;
+
                 i {
                     font-size: 1.2rem;
                     color: white;
@@ -348,6 +378,7 @@ section {
             }
         }
     }
+
     /* Homepage styling */
     &__title {
         font-size: 1.5rem;
@@ -365,17 +396,20 @@ section {
             margin: 20px;
             text-align: center;
         }
+
         &Description {
             font-size: 1.125rem;
             font-weight: 300;
             margin: 20px;
             text-align: center;
         }
+
         &Button {
             text-align: center;
             margin: 50px;
             transition: transform ease 0.6s;
         }
+
         &Button:hover {
             transform: scale(1.2);
         }
@@ -386,17 +420,21 @@ section {
         display: flex;
         flex-flow: column;
         margin: auto;
+
         &Card {
             margin-left: 30px;
+
             &Unit {
                 margin: 25px 25px;
                 transition: all ease 0.4s;
+
                 &Content {
                     transition: box-shadow ease 1s;
                     background-color: #f6f6f6;
                     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
                     border-radius: 20px;
                     display: flex;
+
                     &Number {
                         font-size: 0.886rem;
                         font-weight: 500;
@@ -410,12 +448,14 @@ section {
                         transform: translateX(-15px);
                         margin-right: 5px;
                     }
+
                     i {
                         align-content: center;
                         margin-right: 5px;
                         color: $color-grey;
                         opacity: 0.7;
                     }
+
                     &Text {
                         font-weight: 500;
                         margin: 25px;
@@ -423,14 +463,17 @@ section {
                         text-align: center;
                     }
                 }
+
                 &Content:hover {
                     box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
                 }
+
                 &Content:hover i {
                     color: $color-primary;
                     opacity: 1;
                 }
             }
+
             &Unit:hover {
                 transform: scale(1.02);
             }
@@ -442,27 +485,33 @@ section {
         flex-direction: column;
         margin: auto;
         max-width: 1040px;
+
         &Card {
             display: flex;
             flex-flow: wrap;
             justify-content: center;
+
             &Unit {
                 background-color: white;
                 border-radius: 25px;
                 object-fit: scale-down;
                 margin: 20px 40px;
+
                 &Content {
                     display: flex;
                     justify-content: space-between;
+
                     &Image {
                         border-top-left-radius: 20px;
                         border-top-right-radius: 20px;
                         object-fit: cover;
                         width: 100%;
                         height: 100%;
+
                         &Container {
                             position: relative;
                             aspect-ratio: 2.3 / 1;
+
                             &Text {
                                 background-color: #99e2d0;
                                 border-radius: 4px;
@@ -477,37 +526,44 @@ section {
                             }
                         }
                     }
+
                     &Text {
                         color: black;
                         margin: 10px;
+
                         &Title {
                             margin: 5px;
                             font-size: 1.125rem;
                             font-weight: 700;
                         }
+
                         &Location {
                             margin: 5px;
                             font-size: 1.063rem;
                             font-weight: 300;
                         }
                     }
+
                     &Like {
                         display: flex;
                         flex-flow: column;
                         justify-content: center;
                         transform: translateY(8px) scale(1.4);
                     }
+
                     &LikeLight {
                         font-weight: 300;
                         color: black;
                         transform: translateY(5px) scaleY(1.1);
                         margin-right: 25px;
                     }
+
                     &LikeSolid {
                         transform: translateX(0.2px) translateY(-14px)
                             scaleY(1.15) scaleX(1.02);
                     }
-                    &LikeSolid a {
+
+                    &LikeSolid i {
                         background: -moz-linear-gradient(
                             193.33deg,
                             #9356dc -11.44%,
@@ -532,6 +588,7 @@ section {
                         transition:
                             visibility 0s,
                             opacity 0.5s linear;
+
                         &:hover,
                         &:active {
                             visibility: visible;
@@ -547,6 +604,7 @@ section {
         &Image {
             object-fit: cover;
             width: 100%;
+
             &Container {
                 display: flex;
                 z-index: -1;
@@ -572,48 +630,54 @@ footer {
     background-color: $color-grey;
     color: white;
     padding-bottom: 25px;
+
     &__title {
         margin-top: 0px;
         padding-top: 20px;
         padding-left: 20px;
         font: 100% $font-ohmyfood;
     }
+
     &__element {
         margin-left: 20px;
         margin-top: 10px;
         padding-top: 4px;
-    }
-    &__element a {
         display: flex;
         align-items: center;
         color: white;
     }
+
     &__cooperate p {
         position: absolute;
         left: 45px;
     }
+
     &__legalContact p {
         font-weight: 300;
         margin: 0px;
         padding: 0px;
+        color: white;
     }
 }
 
 /**** Media queries ****/
 
-@media (width >= 768px) {
+@media (width >=768px) {
     .header {
         &__back {
             font-size: 1.5rem;
             margin-top: 10px;
         }
+
         &__title {
             font-size: 2.5rem;
             padding-bottom: 10px;
+
             &Container {
                 box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
             }
         }
+
         &__location {
             padding: 12px;
             margin: 0;
@@ -628,6 +692,7 @@ footer {
         margin-bottom: -40px;
         background-color: #f6f6f6;
     }
+
     .whiteBackground {
         background-color: white;
     }
@@ -638,26 +703,32 @@ footer {
                 font-size: 2.5rem;
             }
         }
+
         &__header {
             padding-top: 15px;
             justify-content: center;
+
             &Title {
                 margin-right: 30px;
             }
         }
+
         &__steps {
             display: flex;
             flex-flow: column;
             align-items: center;
+
             &Card {
                 display: flex;
                 justify-content: center;
                 align-self: start;
             }
         }
+
         &__order {
             padding-bottom: 37px;
         }
+
         &__subsection {
             max-width: 650px;
             margin: auto;
@@ -674,19 +745,23 @@ footer {
         flex-flow: row-reverse;
         padding-top: 34px;
         padding-bottom: 15px;
+
         &__title {
             margin: 0 30px;
             padding: 15px 0px;
             align-self: end;
         }
+
         &__cooperate,
         &__legalContact {
             display: flex;
             align-items: center;
         }
+
         &__cooperate {
             margin-right: 30px;
         }
+
         &__list {
             display: flex;
             margin-right: 50px;
@@ -696,6 +771,7 @@ footer {
             i {
                 padding-right: 15px;
             }
+
             p {
                 position: relative;
                 left: 0px;
@@ -704,7 +780,7 @@ footer {
     }
 }
 
-@media (width >= 1040px) {
+@media (width >=1040px) {
     .section__restaurantsCardUnit {
         max-width: 440px;
     }
